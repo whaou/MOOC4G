@@ -1,0 +1,25 @@
+<script type="loncapa/python">
+ExoNUM= "S3.D3.Q"
+</script>
+
+In practice, we almost never reach the bandwidth calculated in the previous question. Indeed, to reach it, it would require:
+  - only a single user
+  - and very good radio conditions. Indeed, the maximum bandwidth assumes that we use the least robust modulation (MCS28).
+
+For the following questions, we still assume that there is a single user but that he is farther from the base station. We consider two cases (case n°1 is the same as in the previous question):
+
+$ExoNUM.8: Case n°2: User 2 is located at an average distance from the eNB, he uses MCS 16.
+>>What is his bandwidth? Write the result in Mb/s with +/- 0.1Mb/s<<
+
+= 7.736 +- 0.1
+
+$ExoNUM.9: Case n°3: User 3 is very far away from the eNB, he uses MCS 0.
+>> What is his bandwidth? Write the result in Mb/s with +/- 0.1Mb/s<<
+
+= 0.68 +- 0.1
+
+[explanation]
+Like in the previous question, you must refer to the table of slide 22 from the course material. In the column corresponding to 25 RB, we see that the maximum size of the transport block is 7736 bits for MCS 16 and 680 bits for MCS 0. Since each ms we transmit to the same user, we need to multiply this value by 1000 to get the bandwidth in Mb/s, respectively 7.736 and 0.68 Mbit/s.
+[explanation]
+
+

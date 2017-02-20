@@ -1,0 +1,77 @@
+﻿<script type="loncapa/python">
+ExoNUM= "S3.L5"
+</script>
+
+$ExoNUM.1: RLC stands for:
+( ) Rolex Learning Center
+( ) Radio Layer Correction
+(x) Radio Link Control
+( ) Random Loss Correction
+
+$ExoNUM.2: RLC systematically introduces a latency that is not insignificant.
+( ) True
+(x) False
+[explanation]
+True and false! It depends on the mode in which we are.
+Since there are cases for which no latency is introduced (in TM mode for example), we chose "false" as the correct answer.
+[explanation]
+
+
+$ExoNUM.3: The TM mode (Transparent Mode) is usually used to transport:
+(x) specific signaling messages
+( ) voice (VoIP)
+( ) data files
+
+$ExoNUM.4: The UM mode (Unacknowledged Mode) is usually used to transport:
+( ) specific signaling messages
+(x) voice (VoIP)
+( ) data files
+
+$ExoNUM.5: The AM mode (Acknowledged Mode) is usually used to transport:
+( ) specific signaling messages
+( ) voice (VoIP)
+(x) data files
+
+[explanation]
+In the TM mode, there is no segmentation or reliability. So we use this mode to quickly transmit short signaling messages.
+The UM mode allows segmentation and resequencing. Since it does not retransmit data, it is fast enough and is adapted to real-time applications such as VoIP.
+Applications based on file exchange are usually tolerant regarding the delay but they require a good level of reliability. So they are preferably using the AM mode.
+[explanation]
+
+
+$ExoNUM.6: The terminal chooses its operating mode (TM, UM or AM) upon connection in a cell.
+( ) True
+(x) False
+[explanation]
+No, and this is the main interest. The same device (terminal and eNB for instance) can use the different modes in parallel. We say that several "sessions" of the protocol operate in parallel on the device. So it does not need to specify its operating mode beforehand.
+
+When the MAC layer groups RLC-PDUs, it specifies in its headers to which logical channel (that is to say to which RLC session) they belong.
+[explanation]
+
+
+
+$ExoNUM.7: In the UM mode (Unacknowledged Mode), the receiver sends an acknowledgement each time it receives a message:
+( ) True
+(x) False
+[explanation]
+Like its name states, the UM mode (Unacknowledged Mode) does not acknowledge messages.
+[explanation]
+
+$ExoNUM.8: In the AM mode (Acknowledged Mode), the receiver sends an acknowledgement each time it receives a message:
+( ) True
+(x) False
+[explanation]
+In the AM mode, messages are acknowledged but not systematically.
+The transmitter must specifically send a status request to the receiver so that it can send this information. A transmitter can send several messages successively and then, activate the status request only for the last one. So the receiver acknowledges several messages simultaneously.
+[explanation]
+
+
+$ExoNUM.9: In which mode(s) does RLC need sequence numbers?
+[ ] in the TM mode (Transparent Mode)
+[x] in the UM mode (Unacknowledged Mode)
+[x] in the AM mode (Acknowledged Mode)
+[explanation]
+RLC needs sequence numbers if it performs resequencing. That is to say in the UM and AM modes.
+[explanation]
+
+

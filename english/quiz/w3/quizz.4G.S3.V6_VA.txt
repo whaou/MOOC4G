@@ -1,0 +1,58 @@
+﻿<script type="loncapa/python">
+ExoNUM= "S3.L6"
+</script>
+
+$ExoNUM.1: Which of the following suggestions are correct (2 answers expected)?
+[x] In a contention protocol, there can be collisions.
+[ ] In a contention protocol, there cannot be collisions.
+[ ] In a reservation protocol, there can be collisions.
+[x] In a reservation protocol, there cannot be collisions.
+
+[explanation]
+A collision occurs when several users transmit simultaneously. By definition, this can only happen for contention protocols.
+On the other hand, reservation protocols define rules to access the channel to avoid collisions from occurring.
+[explanation]
+
+
+$ExoNUM.2: LTE is mainly:
+( ) a contention protocol
+( ) a fixed reservation protocol
+(x) a dynamic reservation protocol
+[explanation]
+In LTE, the resource is split in resource blocks (RB) that are dynamically allocated by the eNB so that a single user uses a resource each time.
+[explanation]
+
+$ExoNUM.3: The eNB is not allowed to transmit on the random access channel.
+(x) True
+( ) False
+[explanation]
+Indeed, the random access channel is defined on the uplink. So eNBs are not supposed to use this channel.
+[explanation]
+
+$ExoNUM.4: In order to get known by the eNB, a newcomer transmits its TMSI on the random access channel.
+( ) True
+(x) False
+[explanation]
+To get known, the new terminal indeed transmits on the random access channel. But this channel does not allow information to be transmitted (except the sequence number used to transmit).
+
+The terminal will communicate its TMSI to the eNB. But later, on the data channel, when the eNB has allocated it a resource for this purpose.
+[explanation]
+
+
+$ExoNUM.5: Let us consider two UEs that are connecting simultaneously. They could use the same RA-RNTI.
+(x) True
+( ) False
+[explanation]
+The RA-RNTI is calculated from the sequence number used to transmit on the random access channel. If two terminals use the same sequence and transmit in the same 1-ms sub-frame, they will have an identical RA-RNTI.
+[explanation]
+
+
+$ExoNUM.6: If the access requests of two different terminals collide, the conflict is resolved by the MME.
+( ) True
+(x) False
+[explanation]
+No, it is resolved by the base station by resending to the terminal an echo of the connection request.
+[explanation]
+
+
+

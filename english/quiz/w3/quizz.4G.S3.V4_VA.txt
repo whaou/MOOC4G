@@ -1,0 +1,70 @@
+﻿<script type="loncapa/python">
+ExoNUM= "S3.L4"
+</script>
+
+
+$ExoNUM.1: The MAC layer processes errors at the level of:
+( ) the resource elements (RE)
+( ) the resource blocks (RB)
+(x) the transport blocks
+( ) the IP packets
+
+[explanation]
+The MAC layer operates at the level of transport blocks. If an error is detected on a transport block, it will be entirely retransmitted.
+[explanation]
+
+
+
+$ExoNUM.2: In the case of an error, the retransmission occurs:
+( ) in the sub-frame following the transmission, thanks to the acknowledgement system 
+( ) within 4ms after the transmission because the transmitter needs time to get prepared
+(x) 8ms later
+[explanation]
+The receiver needs some time to decode the message and prepare its response (-> 4 sub-frames).
+Also, the transmitter needs time to analyze the response and prepare its reaction (new block or retransmission -> 4 sub-frames).
+So the cycle lasts 8 ms.
+[explanation]
+
+
+
+$ExoNUM.3: The parallelized send and wait (2 answers expected):
+[ ] is only implemented on the base station
+[x] can lead to un-sequencings
+[ ] is handled by the RLC layer (which is above the MAC layer)
+[ ] allows several logical channels to be multiplexed
+[x] allows the bandwidth to be increased up to 8 times
+[explanation]
+If there is no parallelization, the send and wait consequently prevents devices from transmitting during 7 sub-frames after the transmission of a transport block. Parallelization allows this side effect to be avoided, so we can consider that it "allows the bandwidth to be increased up to 8 times".
+
+In the course, we show that in case of transmission errors, parallelization can lead data to be delivered in another order than that of the transmission. That is to say "lead to un-sequencings".
+
+The other suggestions are wrong:
+The HARQ mechanism is implemented identically on the eNBs and the UEs.
+It is handled by the MAC layer (not the RLC layer).
+Even if these two functions are both handled by the MAC layer, HARQ is fully independent from the logical channel multiplexing.
+[explanation]
+
+
+
+$ExoNUM.4: The MAC-PDU is a:
+( ) RLC-SDU
+( ) RLC-PDU
+(x) transport block
+( ) resource block
+[explanation]
+The MAC-PDU is what gets out of the MAC layer. So it is a transport block that is then handled by the physical layer.
+[explanation]
+
+
+
+$ExoNUM.5: In the downward direction, a MAC-PDU can (several answers expected):
+[ ] contain data intended for different terminals
+[x] group data from different sources
+[x] group data of different types
+[x] group data from signaling protocols and some user data
+[explanation]
+The MAC layer multiplexes the different logical channels from the upper layer (RLC). These data can come from different sources (for example, different servers on the Internet), can be of different types (for example, voice, data…) and even come from high-level signaling protocols that use the packet communication mode to transmit their data (such as the RRC protocol).
+
+On the other hand, a transport block is only sent to one terminal (downward direction). So it cannot contain data intended for different terminals.
+[explanation]
+

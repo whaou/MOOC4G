@@ -1,0 +1,20 @@
+<script type="loncapa/python">
+ExoNUM= "S3.D3.Q"
+</script>
+
+$ExoNUM.6: >>How many resource block pairs are available each ms ?<<
+= 25
+
+[explanation]
+The answer is directly given in the second video of the course (slide 17 of the course material).
+These values are taken from the 3GPP standard (TS 136 104, Table 5.2-1).
+[explanation]
+
+$ExoNUM.7: >>What maximal bandwidth can we reach in this configuration? Write the result in Mb/s with +/- 0.1Mb/s (use the . to separate decimals from units and do not write any unit of measurement, example: 4.5)<<
+=18.336 +- 0.1
+
+[explanation]
+In the table of the second video (slide 22 of the course material), we can see that the maximum size of a transport block on 25 RB (for MCS 28) is 18336 bits. Since each ms we transmit to the same user, we need to multiply this value by 1000 to get the bandwidth Mb/s, so 18,336 Mbit/s.
+[explanation]
+
+

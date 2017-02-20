@@ -1,0 +1,72 @@
+﻿<script type="loncapa/python">
+ExoNUM= "S3.L3"
+</script>
+
+$ExoNUM.1: In LTE, the radio resource allocation is handled by:
+( ) The core network
+(x) eNodeBs
+( ) Terminals
+
+[explanation]
+In the LTE architecture, the eUTRAN is supervised by the eNodeBs.
+Within a cell, the supervision of radio resource allocation is fully centralized in the eNB.
+[explanation]
+
+
+$ExoNUM.2: Devices that have nothing to transmit use as much resources as the others.
+( ) True
+(x) False
+[explanation]
+LTE only allocates resources if there is a proven communication need.
+[explanation]
+
+
+$ExoNUM.3: On the downlink, only the base station transmits.
+(x) True
+( ) False
+[explanation]
+Indeed, in the downward direction, all transmissions are done by the eNB.
+But you must understand that all the available resources must nevertheless be shared between the different terminals because all the UEs can potentially need to receive data.
+[explanation]
+
+$ExoNUM.4: The eNB can transmit on the uplink (from the UEs to the eNB).
+( ) True
+(x) False
+[explanation]
+The uplink is only used by the UEs to send data to the eNB.
+The distribution of these resources is indeed determined by the eNB. But it publishes the allocation table on the downlink.
+[explanation]
+
+
+
+$ExoNUM.5: The RNTI:
+[ ] Is a short address calculated from the IMSI
+[ ] Is determined by the UE
+[x] Is determined by the eNB
+[x] Is a way to uniquely identify a terminal within a cell
+
+[explanation]
+The RNTI is allocated by the eNB. So, its uniqueness is only guaranteed within the cell.
+[explanation]
+
+
+$ExoNUM.6: The base station publishes:
+[x] The allocation table of the downlink for the current sub-frame
+[ ] The allocation table of the downlink 4 sub-frames in advance
+[ ] The allocation table of the uplink for the current sub-frame
+[X] The allocation table of the uplink 4 sub-frames in advance
+
+[explanation]
+At each sub-frame, the eNB publishes on the control channel the allocation table for the downlink and the fourth next sub-frame for the uplink. This gives some time to the terminals to prepare their transport blocks and their transmission.
+[explanation]
+
+
+$ExoNUM.7: If they only have a small amount of data to send, terminals can transmit on the control channel of the uplink.
+( ) True
+(x) False
+[explanation]
+Control channels are not meant to transport useful data.
+In any case, if a terminal wants to transmit data, it first needs to send a resource request. It will then be allocated a resource on the data channel that it can use to send its data.
+[explanation]
+
+

@@ -1,0 +1,62 @@
+﻿<script type="loncapa/python">
+ExoNUM= "S3.L1"
+</script>
+
+
+$ExoNUM.1: Choose the correct suggestions.
+[ ] BPSK modulation is more sensitive to perturbations than QPSK
+[x] BPSK modulation is less sensitive to perturbations than QPSK
+[ ] BPSK modulation provides a higher bandwidth than QPSK
+[x] BPSK modulation provides a lower bandwidth than QPSK
+
+[explanation]
+BPSK modulation (Binary Phase Shift Keying) is more robust than QPSK (Quaternary Phase Shift Keying).
+Indeed, it can code 1 bit/symbol while QPSK codes 2 bits/symbol. The "distance" between the different combinations is greater in BPSK. So it is easier to distinguish them upon reception. So it is less sensitive to perturbations.
+On the other hand, the provided bandwidth is two times higher in QPSK since we transmit 2 bits per symbol in QPSK instead of only one in BPSK.
+[explanation]
+
+
+$ExoNUM.2: LTE includes an error correcting system.
+(x) True
+( ) False
+
+$ExoNUM.3: Choose the number of bits per symbol in BPSK.
+(x) 1 bit / symbol
+( ) 2 bits / symbol
+( ) 3 bits / symbol
+( ) 4 bits / symbol
+( ) 6 bits / symbol
+( ) 8 bits / symbol
+[explanation]
+The "B" in BPSK stands for "Binary". So there are two possible states (0 or 1). So, only one bit can be coded.
+[explanation]
+
+$ExoNUM.4: The OFDM transmission:
+[ ] Is designed for a narrow frequency band
+[x] Is designed for a large frequency band
+[ ] Is used to simultaneously transmit on several antennas
+[ ] Is only used in LTE
+[x] Is adapted to urban environments
+
+[explanation]
+OFDM is a transmission technique based on the use of many carriers in the same frequency band. So it is designed to operate in a "broad band".
+
+In an urban environment, the radio signal is subject to many reflections. So the recipient can receive several "copies" of the same signal with different delays. By distributing the transmission over several carriers, the bandwidth on each is reduced. So each symbol lasts longer. This is a good way to resist the delay dispersion which characterizes urban environments.
+
+The technique to transmit and/or receive on several antennas is called MIMO (Multiple Input Multiple Output). This course will not go into so much detail, but we can specify that the use of MIMO is possible with the latest versions of LTE. But OFDM does not necessarily imply the use of MIMO. Also, MIMO can be used without OFDM.
+
+OFDM is used in many other technologies (such as Wi-Fi or digital television). On the other hand, this technique was not used in the previous generations of mobile telephony.
+[explanation]
+
+
+
+$ExoNUM.5: In LTE, two users can use different modulations.
+(x) True
+( ) False
+
+[explanation]
+One of the strengths of LTE is that modulation can be adapted for each user.
+So a same eNB can simultaneously use a fast modulation to communicate with a terminal that is close to it and use a more robust modulation with a UE for which propagation conditions are less favorable.
+[explanation]
+
+

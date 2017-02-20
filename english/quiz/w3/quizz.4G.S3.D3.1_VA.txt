@@ -1,0 +1,63 @@
+﻿<script type="loncapa/python">
+ExoNUM= "S3.D3.Q"
+</script>
+
+$ExoNUM.1: The fastest LTE modulation is 64-QAM. It is not mentioned in the course to keep things simple. Its name comes from the fact that it can reach 64 different states. How many bits can be coded over a symbol in 64-QAM?
+
+( ) 1 bit / symbol
+( ) 2 bits / symbol
+( ) 3 bits / symbol
+( ) 4 bits / symbol
+(x) 6 bits / symbol
+( ) 8 bits / symbol
+
+[explanation]
+In 64-QAM, there are 64 different possible states (from 000000 to 111111).
+To find the number of corresponding bits, you must take the logarithm to the base 2 of the number of states.
+log2(64) = 6.
+[explanation]
+
+
+$ExoNUM.2: LTE allows us to split the available spectrum in sub-frequencies and allocate them to the different UEs based on their needs
+(x) True
+( ) False
+
+[explanation]
+As we have seen it during the course, LTE allows us to split the resource based on frequency (thanks to the OFDM properties) and on time.
+Each millisecond, the eNB allocates frequencies (as resource blocks) to the UE, on the uplink and on the downlink.
+[explanation]
+
+
+$ExoNUM.3: To transmit data in real time (such as voice over IP) we will rather used RLC in the following mode:
+(x) UM
+( ) AM
+
+[explanation]
+In voice over IP, a low latency is preferred over reliability. We prefer losing some data instead of waiting for their retransmission. This is the reason why we use the UM mode (Unacknowledged Mode) for this kind of communication.
+[explanation]
+
+
+$ExoNUM.4: Choose the correct suggestions when considering exchanges with a given UE (3 answers expected)
+[x] On an eNB, there is only one MAC session.
+[ ] On an eNB, there can be several MAC sessions.
+[ ] On an eNB, there is only one RLC session.
+[x] On an eNB, there can be several RLC sessions.
+[ ] On an eNB, there is only one PDCP session.
+[x] On an eNB, there can be several PDCP sessions
+
+[explanation]
+It is logical to only have one session of the MAC layer since it guarantees the sequencing of the different traffics.
+But we have seen that there is a RLC session for each type of flow. It allows us to configure how the RLC operates based on the expected properties of each flow.
+Since PDCP is above RLC, there are as many PDCP sessions as there are RLC sessions. Here too we can apply a different processing based on the type of flow.
+[explanation]
+
+
+$ExoNUM.5: The radio interface can encrypt the transmitted data
+(x) True 
+( ) False
+
+[explanation]
+It is one of the services (optional but recommended) provided by the PDCP layer.
+[explanation]
+
+

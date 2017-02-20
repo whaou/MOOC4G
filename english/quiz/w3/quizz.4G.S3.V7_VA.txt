@@ -1,0 +1,46 @@
+﻿<script type="loncapa/python">
+ExoNUM= "S3.L7"
+</script>
+
+$ExoNUM.1: PDCP provides services
+[ ] for resequencing
+[x] for security
+[ ] for segmentation/assembly
+[ ] for error detection
+[x] for header compression
+[ ] for error correction
+[ ] for resource allocation
+[x] to handle problems linked to handovers
+
+
+$ExoNUM.2: At which level of the radio interface is security handled?
+[[(PDCP), RLC, MAC, PHY (Physical layer)]]
+
+$ExoNUM.3: At which level of the radio interface is error detection handled?
+[[PDCP, RLC, MAC, (PHY (Physical layer))]]
+
+$ExoNUM.4: At which level of the radio interface is resource allocation handled?
+[[PDCP, RLC, (MAC), PHY (Physical layer)]]
+
+$ExoNUM.5: At which level of the radio interface is packet segmentation and assembly handled?
+[[PDCP, (RLC), MAC, PHY (Physical layer)]]
+
+$ExoNUM.6: Which level of the radio interface provides services to help transition from one cell to another?
+[[(PDCP), RLC, MAC, PHY (Physical layer)]]
+
+$ExoNUM.7: Which layer builds transport blocks?
+[[PDCP, RLC, (MAC), PHY (Physical layer)]]
+
+
+$ExoNUM.8: Which layers have retransmission functions?
+[ ] PDCP
+[x] RLC
+[x] MAC
+[ ] PHY
+[explanation]
+The MAC layer retransmits transport blocks thanks to the HARQ protocol.
+The RLC layer in AM mode (Acknoledged Mode) can also retransmit packets.
+[explanation]
+
+
+
