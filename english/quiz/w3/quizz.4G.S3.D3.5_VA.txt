@@ -2,19 +2,21 @@
 ExoNUM= "S3.D3.Q"
 </script>
 
-In this section, we will assume that the resource is fairly shared between several users. In order to keep calculations simple, we assume there are 3 users. The reasoning we will use can easily be generalized from 3 users to any number of users. 
+In this section, we will assume that the resource is fairly shared between several users. In order to keep calculations simple, we assume there are 3 users. The reasoning can easily be generalized from 3 users to any number of users.
 User 1 is in case 1 (MCS 28). User 2 is in case 2 (MCS 16). And user 3 is in case 3 (MCS 0).
 
-We reason on the average bandwidth perceived by the users. We can assume that they receive a very long file and that they do not notice that the transmission is split in blocks. They cannot at all perceive that there is not necessarily a transmission each ms. 
+We consider the average bandwidth perceived by the users. We can assume that they receive a very long file and that they do not notice that the transmission is split into blocks. They cannot perceive that there is not necessarily a transmission each ms.
 
-$ExoNUM10: We assume that the base station transmits in turns to each user. That is to say, it changes for a new recipient at each sub-frame. What is the bandwidth allocated to each?
->>Which bandwidth has user 1? Write the result in Mb/s with +/- 0.1Mb/s<<
+$ExoNUM10: We assume that the base station transmits in turns to each user. That is to say, it changes for a new recipient at each sub-frame. What is the throughput allocated to each?
+Hint: To answer these questions, you need the correct answer to previous ones.
+
+>>Which throughput has user 1? Write the result in Mb/s with +/- 0.1Mb/s<<
 = 6.1 +- 0.1
 
-$ExoNUM11: >> Which bandwidth has user 2? Write the result in Mb/s with +/- 0.1Mb/s<<
+$ExoNUM11: >> Which throughput has user 2? Write the result in Mb/s with +/- 0.1Mb/s<<
 = 2.6 +- 0.1
 
-$ExoNUM12: >> Which bandwidth has user 3? Write the result in Mb/s with +/- 0.1Mb/s<<
+$ExoNUM12: >> Which throughput has user 3? Write the result in Mb/s with +/- 0.1Mb/s<<
 = 0.2 +- 0.1
 
 
@@ -35,7 +37,5 @@ $ExoNUM14: >>According to you, is this average bandwidth representative of the b
 (x) No
 
 [explanation]
-No, we mainly tend to remember things that do not work, when the bandwidth is slow. So we have to consider the lowest bandwidth provided.
+No, human mainly tend to remember things that do not work, i.e. when the bandwidth is slow. So we have to consider case with the lowest bandwidth.
 [explanation]
-
-

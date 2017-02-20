@@ -18,22 +18,22 @@ Since there are cases for which no latency is introduced (in TM mode for example
 
 
 $ExoNUM.3: The TM mode (Transparent Mode) is usually used to transport:
-(x) specific signaling messages
+(x) specific signalling messages
 ( ) voice (VoIP)
 ( ) data files
 
 $ExoNUM.4: The UM mode (Unacknowledged Mode) is usually used to transport:
-( ) specific signaling messages
+( ) specific signalling messages
 (x) voice (VoIP)
 ( ) data files
 
 $ExoNUM.5: The AM mode (Acknowledged Mode) is usually used to transport:
-( ) specific signaling messages
+( ) specific signalling messages
 ( ) voice (VoIP)
 (x) data files
 
 [explanation]
-In the TM mode, there is no segmentation or reliability. So we use this mode to quickly transmit short signaling messages.
+In the TM mode, there is no segmentation or reliability. So we use this mode to quickly transmit short signalling messages.
 The UM mode allows segmentation and resequencing. Since it does not retransmit data, it is fast enough and is adapted to real-time applications such as VoIP.
 Applications based on file exchange are usually tolerant regarding the delay but they require a good level of reliability. So they are preferably using the AM mode.
 [explanation]
@@ -73,5 +73,3 @@ $ExoNUM.9: In which mode(s) does RLC need sequence numbers?
 [explanation]
 RLC needs sequence numbers if it performs resequencing. That is to say in the UM and AM modes.
 [explanation]
-
-

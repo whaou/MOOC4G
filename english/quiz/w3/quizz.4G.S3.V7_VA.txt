@@ -39,8 +39,5 @@ $ExoNUM.8: Which layers have retransmission functions?
 [ ] PHY
 [explanation]
 The MAC layer retransmits transport blocks thanks to the HARQ protocol.
-The RLC layer in AM mode (Acknoledged Mode) can also retransmit packets.
+The RLC layer in AM mode (Acknowledged Mode) can also retransmit packets.
 [explanation]
-
-
-

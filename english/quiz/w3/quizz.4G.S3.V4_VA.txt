@@ -16,7 +16,7 @@ The MAC layer operates at the level of transport blocks. If an error is detected
 
 
 $ExoNUM.2: In the case of an error, the retransmission occurs:
-( ) in the sub-frame following the transmission, thanks to the acknowledgement system 
+( ) in the sub-frame following the transmission, thanks to the acknowledgement system
 ( ) within 4ms after the transmission because the transmitter needs time to get prepared
 (x) 8ms later
 [explanation]
@@ -39,9 +39,9 @@ If there is no parallelization, the send and wait consequently prevents devices 
 In the course, we show that in case of transmission errors, parallelization can lead data to be delivered in another order than that of the transmission. That is to say "lead to un-sequencings".
 
 The other suggestions are wrong:
-The HARQ mechanism is implemented identically on the eNBs and the UEs.
-It is handled by the MAC layer (not the RLC layer).
-Even if these two functions are both handled by the MAC layer, HARQ is fully independent from the logical channel multiplexing.
+- The HARQ mechanism is implemented identically on the eNBs and the UEs.
+- It is handled by the MAC layer (not the RLC layer).
+- Even if these two functions are both handled by the MAC layer, HARQ is fully independent from the logical channel multiplexing.
 [explanation]
 
 
@@ -57,14 +57,13 @@ The MAC-PDU is what gets out of the MAC layer. So it is a transport block that i
 
 
 
-$ExoNUM.5: In the downward direction, a MAC-PDU can (several answers expected):
+$ExoNUM.5: In the downlink, a MAC-PDU can (several answers expected):
 [ ] contain data intended for different terminals
 [x] group data from different sources
 [x] group data of different types
 [x] group data from signaling protocols and some user data
 [explanation]
-The MAC layer multiplexes the different logical channels from the upper layer (RLC). These data can come from different sources (for example, different servers on the Internet), can be of different types (for example, voice, data…) and even come from high-level signaling protocols that use the packet communication mode to transmit their data (such as the RRC protocol).
+The MAC layer multiplexes the different logical channels from the upper layer (RLC). These data can come from different sources (for example, different servers on the Internet), can be of different types (for example, voice, data…) and even come from high-level signalling protocols that use the packet communication mode to transmit their data (such as the RRC protocol).
 
-On the other hand, a transport block is only sent to one terminal (downward direction). So it cannot contain data intended for different terminals.
+On the other hand, in downlink, a transport block is only sent to ONE terminal. So it cannot contain data intended for different terminals.
 [explanation]
-

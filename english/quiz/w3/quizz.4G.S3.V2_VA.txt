@@ -20,19 +20,19 @@ $ExoNUM.2: A Resource Block (RB) typically contains:
 [ ] A variable number of resource elements (RE)
 
 [explanation]
-A resource block is spread in frequency over 12 sub-carriers and lasts (typically) 7 symbols.
+A resource block is spread in frequency over 12 sub-carriers and lasts 7 symbols (typically).
 So, it contains 12x7=84 resource elements.
 [explanation]
 
 
-$ExoNUM.3: If we have a 20-Mhz bandwidth, how many resource blocks (RB) are available every 0,5ms?
+$ExoNUM.3: When operating on a 20MHz wide channel, how many resource blocks (RB) are available every 0,5ms?
 =100
 
 [explanation]
 Remember that LTE allows different bandwidths. A number of resource blocks corresponds to each bandwidth. For example:
-  - 1,4-MHz bandwidth: 6 resource blocks
-  - 5-MHz bandwidth: 25 resource blocks
-  - 20-MHz bandwidth: 100 resource blocks
+  - 1,4 MHz bandwidth: 6 resource blocks
+  - 5 MHz bandwidth: 25 resource blocks
+  - 20 MHz bandwidth: 100 resource blocks
 [explanation]
 
 
@@ -53,19 +53,16 @@ $ExoNUM.5: The transmission duration of a transport block is:
 Transport blocks are transmitted on a given sub-frame, that is to say in 1ms.
 If the amount of data to be transmitted is more important than the capacity of a transport block, data is split over several blocks.
 
-Note: Later, we will see that if an error occurs, the block can be retransmitted. In that case, its transportation will last over one millisecond. But each transmission lasts less than 1ms.
+Note: Later, we will see that if an error occurs, the block can be retransmitted. In that case, its complete transmission will last over one millisecond. But each (re)transmission lasts less than 1ms.
 [explanation]
 
 
-$ExoNUM.6: The size of the transport blocks:
+$ExoNUM.6: The size of the transport blocks (number of bits per transport block):
 [ ] Is fixed
 [x] Can vary depending on the modulation used
 [x] Can vary depending on the number of available resource blocks
 [explanation]
 A transport block corresponds to the amount of data we can send from (or to) a given user in one sub-frame (that is to say in 1 ms).
 If many resource blocks are available (for example if few users need to transmit at this time), we can form a large transport block.
-Also, depending on the MCS (Modulation/coding rate couple), we can choose to transmit more or less useful information on each resource block.
+Also, depending on the MCS (Modulation/coding rate couple), more or less useful information can be transmitted on each resource block.
 [explanation]
-
-
-

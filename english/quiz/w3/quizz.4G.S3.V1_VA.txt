@@ -31,26 +31,8 @@ $ExoNUM.3: Choose the number of bits per symbol in BPSK.
 The "B" in BPSK stands for "Binary". So there are two possible states (0 or 1). So, only one bit can be coded.
 [explanation]
 
-$ExoNUM.4: The OFDM transmission:
-[ ] Is designed for a narrow frequency band
-[x] Is designed for a large frequency band
-[ ] Is used to simultaneously transmit on several antennas
-[ ] Is only used in LTE
-[x] Is adapted to urban environments
 
-[explanation]
-OFDM is a transmission technique based on the use of many carriers in the same frequency band. So it is designed to operate in a "broad band".
-
-In an urban environment, the radio signal is subject to many reflections. So the recipient can receive several "copies" of the same signal with different delays. By distributing the transmission over several carriers, the bandwidth on each is reduced. So each symbol lasts longer. This is a good way to resist the delay dispersion which characterizes urban environments.
-
-The technique to transmit and/or receive on several antennas is called MIMO (Multiple Input Multiple Output). This course will not go into so much detail, but we can specify that the use of MIMO is possible with the latest versions of LTE. But OFDM does not necessarily imply the use of MIMO. Also, MIMO can be used without OFDM.
-
-OFDM is used in many other technologies (such as Wi-Fi or digital television). On the other hand, this technique was not used in the previous generations of mobile telephony.
-[explanation]
-
-
-
-$ExoNUM.5: In LTE, two users can use different modulations.
+$ExoNUM.4: In LTE, two users can use different modulations.
 (x) True
 ( ) False
 
@@ -58,5 +40,3 @@ $ExoNUM.5: In LTE, two users can use different modulations.
 One of the strengths of LTE is that modulation can be adapted for each user.
 So a same eNB can simultaneously use a fast modulation to communicate with a terminal that is close to it and use a more robust modulation with a UE for which propagation conditions are less favorable.
 [explanation]
-
-

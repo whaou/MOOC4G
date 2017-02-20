@@ -26,7 +26,7 @@ $ExoNUM.3: The eNB is not allowed to transmit on the random access channel.
 (x) True
 ( ) False
 [explanation]
-Indeed, the random access channel is defined on the uplink. So eNBs are not supposed to use this channel.
+Indeed, the random access channel is defined on the uplink. eNBs are not supposed to use this channel.
 [explanation]
 
 $ExoNUM.4: In order to get known by the eNB, a newcomer transmits its TMSI on the random access channel.
@@ -53,6 +53,3 @@ $ExoNUM.6: If the access requests of two different terminals collide, the confli
 [explanation]
 No, it is resolved by the base station by resending to the terminal an echo of the connection request.
 [explanation]
-
-
-

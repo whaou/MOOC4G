@@ -23,7 +23,7 @@ $ExoNUM.2: LTE allows us to split the available spectrum in sub-frequencies and 
 ( ) False
 
 [explanation]
-As we have seen it during the course, LTE allows us to split the resource based on frequency (thanks to the OFDM properties) and on time.
+As we have seen it during the course, LTE allows us to split the resource based on frequency and on time.
 Each millisecond, the eNB allocates frequencies (as resource blocks) to the UE, on the uplink and on the downlink.
 [explanation]
 
@@ -48,16 +48,14 @@ $ExoNUM.4: Choose the correct suggestions when considering exchanges with a give
 [explanation]
 It is logical to only have one session of the MAC layer since it guarantees the sequencing of the different traffics.
 But we have seen that there is a RLC session for each type of flow. It allows us to configure how the RLC operates based on the expected properties of each flow.
-Since PDCP is above RLC, there are as many PDCP sessions as there are RLC sessions. Here too we can apply a different processing based on the type of flow.
+Since PDCP is above RLC, there are as many PDCP sessions as there are RLC sessions. Here too, we can apply a different processing based on the type of flow.
 [explanation]
 
 
-$ExoNUM.5: The radio interface can encrypt the transmitted data
-(x) True 
+$ExoNUM.5: The radio interface can cypher the transmitted data
+(x) True
 ( ) False
 
 [explanation]
 It is one of the services (optional but recommended) provided by the PDCP layer.
 [explanation]
-
-

@@ -6,7 +6,7 @@ $ExoNUM.1: In LTE, the radio resource allocation is handled by:
 ( ) The core network
 (x) eNodeBs
 ( ) Terminals
-
+( ) jointly by eNodeBs and Terminals
 [explanation]
 In the LTE architecture, the eUTRAN is supervised by the eNodeBs.
 Within a cell, the supervision of radio resource allocation is fully centralized in the eNB.
@@ -26,7 +26,7 @@ $ExoNUM.3: On the downlink, only the base station transmits.
 ( ) False
 [explanation]
 Indeed, in the downward direction, all transmissions are done by the eNB.
-But you must understand that all the available resources must nevertheless be shared between the different terminals because all the UEs can potentially need to receive data.
+But you must understand that all available resources must nevertheless be shared between the different terminals because all the UEs can potentially need to receive data.
 [explanation]
 
 $ExoNUM.4: The eNB can transmit on the uplink (from the UEs to the eNB).
@@ -34,7 +34,7 @@ $ExoNUM.4: The eNB can transmit on the uplink (from the UEs to the eNB).
 (x) False
 [explanation]
 The uplink is only used by the UEs to send data to the eNB.
-The distribution of these resources is indeed determined by the eNB. But it publishes the allocation table on the downlink.
+The distribution of these resources is indeed determined by the eNB. But the eNB publishes the allocation table on the downlink.
 [explanation]
 
 
@@ -66,7 +66,5 @@ $ExoNUM.7: If they only have a small amount of data to send, terminals can trans
 (x) False
 [explanation]
 Control channels are not meant to transport useful data.
-In any case, if a terminal wants to transmit data, it first needs to send a resource request. It will then be allocated a resource on the data channel that it can use to send its data.
+In any case, if a terminal wants to transmit data, it first has to send a resource request. It will then be allocated a resource on the data channel that it can use to send its data.
 [explanation]
-
-

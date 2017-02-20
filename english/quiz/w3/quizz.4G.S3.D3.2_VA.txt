@@ -1,2 +1,1 @@
 ﻿An operator deploys a LTE system on 2x5 MHz (5 MHz on the uplink and 5MHz on the downlink). We will study the available bandwidth when several users with different radio conditions share the resource.
-

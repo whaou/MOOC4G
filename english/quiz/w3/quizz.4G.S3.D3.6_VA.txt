@@ -2,9 +2,9 @@
 ExoNUM= "S3.D3.Q"
 </script>
 
-In this section, we try to find a scheduling policy which can provide each user the same bandwidth no matter the radio conditions. For that matter, we will reason on user 1: we assume that we send him data during 1 ms and then we try to send the same amount of data to user 2, then user 3, even if we must transmit during a longer period of time. 
+In this section, we try to find a scheduling policy which can provide each user the same bandwidth no matter the radio conditions. For that matter, we will reason on user 1: we assume that we send him data during 1 ms and then we try to send the same amount of data to user 2, then user 3, even if we must transmit during a longer period of time.
 Note 1: In this problem, we do not take into account the weight of the headers nor the extra costs linked to segmentation and reassembly mechanisms.
-Note 2: A 1 ms duration corresponds to a sub-frame. The transmission is necessarily done in multiples of 1 ms (we can transmit during several sub-frames but not during 3.5 for example).
+Note 2: A 1 ms duration corresponds to a sub-frame. Don't forget to consider that transmission is necessarily done in multiples of 1 ms (we can transmit during several sub-frames but not during 3.5 for example).
 
 $ExoNUM15: >>How many milliseconds must we give to user 2?<<
 = 3
@@ -14,7 +14,7 @@ $ExoNUM16: >> How many milliseconds must we give to user 3?<<
 
 [explanation]
 During 1ms, we send 18336 bits to user 1.
-User 2 receives 7736 bits each ms. So 18336/7736=2,37 sub-frames are required to send the same amount of data to user 2. 
+User 2 receives 7736 bits each ms. So 18336/7736=2,37 sub-frames are required to send the same amount of data to user 2.
 This means 3 ms since a same sub-frame cannot be shared by several users.
 The same for user 3: it requires 18336/680=26,96, so 27 ms.
 [explanation]
@@ -23,14 +23,15 @@ $ExoNUM17: >>What is the total duration of a user1-user2-user3 cycle? Write the 
 = 31
 
 [explanation]
-We transmit to user 3 during 27 ms, to user 2 during 3 ms and to user 1 during 1 ms. So the cycle lasts 27+3+1 = 31 ms. [explanation]
+We transmit to user 3 during 27 ms, to user 2 during 3 ms and to user 1 during 1 ms. So the cycle lasts 27+3+1 = 31 ms.
+[explanation]
 
 $ExoNUM18: >>Calculate the actual bandwidth for user 1. Note that this bandwidth is (more or less) the same for the 2 other users. WARNING: write the result in kb/s (+/-10kb/s)<<
 = 591 +- 10
 
 [explanation]
-User 1 transmits one 18336-bit block every 31 ms (cycle duration). So he has 18336/31 = 591 kbit/s, so 0.59 Mbit/s. 
-It is the same bandwidth for the 2 others because of the construction of the scheduling. 
+User 1 transmits one 18336-bit block every 31 ms (cycle duration). So he has 18336/31 = 591 kbit/s, so 0.59 Mbit/s.
+It is the same bandwidth for the 2 others because of the construction of the scheduling.
 [explanation]
 
 
@@ -40,7 +41,7 @@ $ExoNUM19: >>Compare this bandwidth to the one displayed in adverts (that is to 
 (x) Lower
 
 [explanation]
-The bandwidth given in the advert is the maximum theoretical bandwidth, 18Mb/s in our case (5MHz). So we are way below this bandwidth with our 0.6Mb/s. 
+The bandwidth given in the advert is the maximum theoretical bandwidth, 18Mb/s in our case (5MHz). So we are way below this bandwidth with our 0.6Mb/s.
 [explanation]
 
 $ExoNUM20: >>According to you, which scheduling is the best?<<
@@ -50,11 +51,8 @@ $ExoNUM20: >>According to you, which scheduling is the best?<<
 
 [explanation]
 Giving the same bandwidth to everyone means considering the bandwidth of the user with the lowest bandwidth (we will have to use many resources for him).
-We can imagine giving him a slightly lower bandwidth but still higher than if we gave the same resource to each. 
+We can imagine giving him a slightly lower bandwidth but still higher than if we gave the same resource to each.
 For example, if we provide user 3 during 9 ms, user 2 during 2 ms and user 1 during 1 ms. We have a 12-ms cycle. User 1 has 18/12=1.5 Mbit/s, user 2 has 7.7 x 2/12 = 1.3 Mbit/s and user 3 has 0.68 x 9/12 = 0.51 Mbit/s. User 3 has almost the same bandwidth as if he were alone and users 2 and 1 have an equivalent bandwidth that is above 1 Mbit/s.
-We understand why the standard does not define scheduling algorithms!
+You may now understand why the standard does not define scheduling algorithms!
 Do not hesitate to talk about this issue on the forum.
 [explanation]
-
-
-
